@@ -43,28 +43,28 @@ export const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-      src="/singapore/sing4.JPG"
+      src="/singapore/sing4.avif"
         alt="And example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="/singapore/sing8.JPG"
+        src="/singapore/sing8.avif"
         alt="An example of a space launch"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="/malaysia/mal2.JPG"
+        src="/malaysia/mal2.avif"
         alt="Orbiting satellite"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="/parallax1.JPG"
+        src="/parallax1.avif"
         alt="Orbiting satellite"
         start={0}
         end={-500}

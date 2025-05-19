@@ -34,7 +34,7 @@ export default function Malaysia({
 
               <div className="flex-shrink-0 flex flex-col justify-center ml-[144px]">
                 <img
-                  src="/malaysia/mal6.JPG"
+                  src="/malaysia/mal6.avif"
                   alt="Malaysia"
                   className="w-[720px] h-[480px] object-cover border-[16px] border-white"
                   style={{ transform: "rotate(-3deg)" }}
@@ -60,17 +60,17 @@ export default function Malaysia({
                 <div className="h-1/3 relative w-1/2 group self-end">
                   {/* just give it layoutId—animation is automatic now */}
                   <motion.img
-                    layoutId="/malaysia/mal1.JPG"
-                    src="/malaysia/mal1.JPG"
+                    layoutId="/malaysia/mal1.avif"
+                    src="/malaysia/mal1.avif"
                     alt="Singapore"
                     className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#decbad] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal1.JPG")
+                      setExpandedSrc("/malaysia/mal1.avif")
                     }
                   />
                   <Button
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal1.JPG")
+                      setExpandedSrc("/malaysia/mal1.avif")
                     }
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#732636] text-[#decbad] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#decbad] group-hover:text-[#732636] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                   >
@@ -80,17 +80,17 @@ export default function Malaysia({
                 <div className="h-2/3 relative group ">
                   {/* just give it layoutId—animation is automatic now */}
                   <motion.img
-                    layoutId="/malaysia/mal3.JPG"
-                    src="/malaysia/mal3.JPG"
+                    layoutId="/malaysia/mal3.avif"
+                    src="/malaysia/mal3.avif"
                     alt="Singapore"
                     className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#decbad] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal3.JPG")
+                      setExpandedSrc("/malaysia/mal3.avif")
                     }
                   />
                   <Button
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal3.JPG")
+                      setExpandedSrc("/malaysia/mal3.avif")
                     }
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#732636] text-[#decbad] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#decbad] group-hover:text-[#732636] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                   >
@@ -103,17 +103,17 @@ export default function Malaysia({
               <div className="flex-shrink-0 w-[360px] flex flex-col justify-center h-screen space-y-[16px] py-[16px]">
                 <div className="h-4/5 relative group ">
                   <motion.img
-                    layoutId="/malaysia/mal4.JPG"
-                    src="/malaysia/mal4.JPG"
+                    layoutId="/malaysia/mal4.avif"
+                    src="/malaysia/mal4.avif"
                     alt="Singapore"
                     className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#decbad] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal4.JPG")
+                      setExpandedSrc("/malaysia/mal4.avif")
                     }
                   />
                   <Button
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal4.JPG")
+                      setExpandedSrc("/malaysia/mal4.avif")
                     }
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#732636] text-[#decbad] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#decbad] group-hover:text-[#732636] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                   >
@@ -127,17 +127,17 @@ export default function Malaysia({
               <div className="flex-shrink-0 w-[1080px] flex flex-col justify-center h-screen space-y-[16px] ml-[96px]">
                 <div className="h-screen relative group ">
                   <motion.img
-                    layoutId="/malaysia/mal2.JPG"
-                    src="/malaysia/mal2.JPG"
+                    layoutId="/malaysia/mal2.avif"
+                    src="/malaysia/mal2.avif"
                     alt="Singapore"
                     className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#decbad] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal2.JPG")
+                      setExpandedSrc("/malaysia/mal2.avif")
                     }
                   />
                   <Button
                     onClick={() =>
-                      setExpandedSrc("/malaysia/mal2.JPG")
+                      setExpandedSrc("/malaysia/mal2.avif")
                     }
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#732636] text-[#decbad] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#decbad] group-hover:text-[#732636] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                   >

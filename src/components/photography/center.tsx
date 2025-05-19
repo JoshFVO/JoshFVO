@@ -33,7 +33,7 @@ export const CenterImage = () => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage: `url('/photogs.JPG')`,
+        backgroundImage: `url('/photogs.avif')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
