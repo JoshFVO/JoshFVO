@@ -33,7 +33,7 @@ export default function Singapore({
 
                 <div className="flex-shrink-0 flex flex-col justify-center ml-[144px]">
                     <img
-                        src="/singapore/singapore1.JPG"
+                        src="/singapore/singapore1.avif"
                         alt="Singapore"
                         className="w-[720px] h-[480px] object-cover border-[16px] border-white"
                         style={{ transform: "rotate(-3deg)" }}
@@ -59,17 +59,17 @@ export default function Singapore({
                     <div className="h-1/3 relative w-1/2 group self-end">
                         {/* just give it layoutId—animation is automatic now */}
                         <motion.img
-                            layoutId="/singapore/sing3.JPG"
-                            src="/singapore/sing3.JPG"
+                            layoutId="/singapore/sing3.avif"
+                            src="/singapore/sing3.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing3.JPG")
+                                setExpandedSrc("/singapore/sing3.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing3.JPG")
+                                setExpandedSrc("/singapore/sing3.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -79,17 +79,17 @@ export default function Singapore({
                     <div className="h-2/3 relative group ">
                         {/* just give it layoutId—animation is automatic now */}
                         <motion.img
-                            layoutId="/singapore/sing8.JPG"
-                            src="/singapore/sing8.JPG"
+                            layoutId="/singapore/sing8.avif"
+                            src="/singapore/sing8.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing8.JPG")
+                                setExpandedSrc("/singapore/sing8.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing8.JPG")
+                                setExpandedSrc("/singapore/sing8.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -102,17 +102,17 @@ export default function Singapore({
                 <div className="flex-shrink-0 w-[360px] flex flex-col justify-center h-screen space-y-[16px] py-[16px]">
                     <div className="h-4/5 relative group ">
                         <motion.img
-                            layoutId="/singapore/sing2.JPG"
-                            src="/singapore/sing2.JPG"
+                            layoutId="/singapore/sing2.avif"
+                            src="/singapore/sing2.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing2.JPG")
+                                setExpandedSrc("/singapore/sing2.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing2.JPG")
+                                setExpandedSrc("/singapore/sing2.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -124,17 +124,17 @@ export default function Singapore({
                 <div className="flex-shrink-0 w-[720px] flex flex-col justify-center h-screen space-y-[16px] pl-[96px]">
                     <div className="h-screen relative group ">
                         <motion.img
-                            layoutId="/singapore/sing7.JPG"
-                            src="/singapore/sing7.JPG"
+                            layoutId="/singapore/sing7.avif"
+                            src="/singapore/sing7.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing7.JPG")
+                                setExpandedSrc("/singapore/sing7.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing7.JPG")
+                                setExpandedSrc("/singapore/sing7.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -146,17 +146,17 @@ export default function Singapore({
                 <div className="flex-shrink-0 w-[675px] flex flex-col justify-center h-screen space-y-[16px]">
                     <div className="h-3/5 relative group ">
                         <motion.img
-                            layoutId="/singapore/sing5.JPG"
-                            src="/singapore/sing5.JPG"
+                            layoutId="/singapore/sing5.avif"
+                            src="/singapore/sing5.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing5.JPG")
+                                setExpandedSrc("/singapore/sing5.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing5.JPG")
+                                setExpandedSrc("/singapore/sing5.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -168,17 +168,17 @@ export default function Singapore({
                 <div className="flex-shrink-0 w-[450px] flex flex-col justify-center h-screen space-y-[16px]  ml-[96px]">
                     <div className="h-4/5 relative group ">
                         <motion.img
-                            layoutId="/singapore/sing4.JPG"
-                            src="/singapore/sing4.JPG"
+                            layoutId="/singapore/sing4.avif"
+                            src="/singapore/sing4.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing4.JPG")
+                                setExpandedSrc("/singapore/sing4.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing4.JPG")
+                                setExpandedSrc("/singapore/sing4.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
@@ -190,17 +190,17 @@ export default function Singapore({
                 <div className="flex-shrink-0 w-[1080px] flex flex-col justify-center h-screen space-y-[16px]">
                     <div className="h-screen relative group ">
                         <motion.img
-                            layoutId="/singapore/sing9.JPG"
-                            src="/singapore/sing9.JPG"
+                            layoutId="/singapore/sing9.avif"
+                            src="/singapore/sing9.avif"
                             alt="Singapore"
                             className="h-full object-cover relative border-0 group-hover:border-[16px] border-[#B1D8B7] transition-all duration-700 ease-in-out hover:cursor-zoom-in"
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing9.JPG")
+                                setExpandedSrc("/singapore/sing9.avif")
                             }
                         />
                         <Button
                             onClick={() =>
-                                setExpandedSrc("/singapore/sing9.JPG")
+                                setExpandedSrc("/singapore/sing9.avif")
                             }
                             className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2F5233] text-[#B1D8B7] text-[16px] font-[500] transition-transform duration-700 group-hover:bg-[#B1D8B7] group-hover:text-[#2F5233] absolute bottom-4 right-4 p-0 group-hover:translate-y-[-16px] group-hover:translate-x-[-16px] hover:cursor-zoom-in"
                         >
