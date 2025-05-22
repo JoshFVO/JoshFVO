@@ -3,7 +3,7 @@ import Home from "./pages/home";
 import Photography from "./pages/photography";
 import Contact from "./pages/contact";
 import Recipes from "./pages/recipes";
-import SmoothScrollHero from "./pages/test";
+import Recipe from "./pages/recipe";
 
 export default function Router() {
   return (
@@ -13,8 +13,8 @@ export default function Router() {
         <Route path="/home" element={<Home />} />
         <Route path="/photography" element={<Photography /> } />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/recipes/:id" element={<Recipe />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<SmoothScrollHero />} />
         {/* 404 page */}
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
