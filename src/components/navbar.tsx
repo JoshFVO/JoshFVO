@@ -18,7 +18,7 @@ export default function Navbar() {
                             <a href="/home">About</a>
                         </li>
                         <li className="hover:bg-gray-700 transition-all duration-300 ease-out px-[12px] py-[6px] rounded-full">
-                            <a href="/photography">Photography</a>
+                            <a href="/projects">Projects</a>
                         </li>
                         <li className="hover:bg-gray-700 transition-all duration-300 ease-out px-[12px] py-[6px] rounded-full">
                             <a href="/recipes">Recipes</a>
@@ -58,7 +58,7 @@ export default function Navbar() {
                             <a href="/home" onClick={() => setMenuOpen(false)}>About</a>
                         </li>
                         <li>
-                            <a href="/photography" onClick={() => setMenuOpen(false)}>Photography</a>
+                            <a href="/projects" onClick={() => setMenuOpen(false)}>Projects</a>
                         </li>
                         <li>
                             <a href="/home" onClick={() => setMenuOpen(false)}>Blog</a>

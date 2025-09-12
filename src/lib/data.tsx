@@ -32,21 +32,21 @@ export const DATA = {
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
     {
-      title: "Magic UI",
+      title: "Romona's Home Care",
       href: "https://magicui.design",
       dates: "June 2023 - Present",
       active: true,
       description:
         "Designed, developed and sold animated UI components for developers.",
       technologies: [
-        "Next.js",
+        "React Native",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Expo Go",
+        "Nativewind",
+        "Firebase",
+        "Mobile",
+        "iOS",
+        "Android",
       ],
       links: [
         {
