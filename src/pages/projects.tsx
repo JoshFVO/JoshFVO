@@ -3,6 +3,7 @@ import { Github, ExternalLink, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { DetailedProjectCard } from "@/components/detailed-project-card";
 import { useNavigate } from "react-router-dom";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 const PROJECTS = [
     {
@@ -129,62 +130,63 @@ export default function Projects() {
     return (
         <div className="relative">
             <Navbar />
-            <div className="max-w-[1200px] mx-auto px-6 py-16">
-                {/* Header Section */}
-                <div className="text-center mb-16">
-                    <Badge className="text-[14px] font-[300] bg-black text-white mb-4">
-                        Projects
-                    </Badge>
-                    <h1 className="text-[48px] font-[600] mb-4">
-                        My Computer Science Projects
-                    </h1>
-                    <p className="text-[18px] text-gray-500 font-[300] max-w-[672px] mx-auto">
-                        Here's a detailed look at some of my favorite projects I've built, ranging from web applications
-                        to machine learning models and mobile apps. Each project showcases different technical skills and problem-solving approaches.
-                    </p>
-                </div>
+            <BlurFade>
+                <div className="max-w-[1200px] mx-auto px-6 py-16">
+                    {/* Header Section */}
+                    <div className="text-center mb-16">
+                        <Badge className="text-[14px] font-[300] bg-black text-white mb-4">
+                            Projects
+                        </Badge>
+                        <h1 className="text-[48px] font-[600] mb-4">
+                            My Computer Science Projects
+                        </h1>
+                        <p className="text-[18px] text-gray-500 font-[300] max-w-[672px] mx-auto">
+                            Here's a detailed look at some of my favorite projects I've built, ranging from web applications
+                            to machine learning models and mobile apps. Each project showcases different technical skills and problem-solving approaches.
+                        </p>
+                    </div>
 
-                {/* Projects Grid */}
-                <div className="space-y-12">
-                    {PROJECTS.map((project) => (
-                        <DetailedProjectCard
-                            key={project.title}
-                            title={project.title}
-                            description={project.description}
-                            longDescription={project.longDescription}
-                            dates={project.dates}
-                            tags={project.tags}
-                            image={project.image}
-                            links={project.links}
-                            features={project.features}
-                            techStack={project.techStack}
-                        />
-                    ))}
-                </div>
+                    {/* Projects Grid */}
+                    <div className="space-y-12">
+                        {PROJECTS.map((project) => (
+                            <DetailedProjectCard
+                                key={project.title}
+                                title={project.title}
+                                description={project.description}
+                                longDescription={project.longDescription}
+                                dates={project.dates}
+                                tags={project.tags}
+                                image={project.image}
+                                links={project.links}
+                                features={project.features}
+                                techStack={project.techStack}
+                            />
+                        ))}
+                    </div>
 
-                {/* Call to Action */}
-                <div className="text-center mt-16 pt-16 border-t border-gray-200">
-                    <h2 className="text-[32px] font-[600] mb-4">
-                        Interested in collaborating?
-                    </h2>
-                    <p className="text-[18px] text-gray-500 font-[300] mb-8 max-w-[600px] mx-auto">
-                        I'm always open to discussing new opportunities, interesting projects,
-                        or just having a conversation about technology and development.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button 
-                            onClick={() => navigate('/contact')}
-                            className="px-8 py-3 bg-black text-white rounded-lg text-[16px] font-[500] hover:bg-gray-800 transition-colors"
-                        >
-                            Get in Touch
-                        </button>
-                        <button className="px-8 py-3 border border-gray-300 text-gray-700 rounded-lg text-[16px] font-[500] hover:bg-gray-50 transition-colors">
-                            View Resume
-                        </button>
+                    {/* Call to Action */}
+                    <div className="text-center mt-16 pt-16 border-t border-gray-200">
+                        <h2 className="text-[32px] font-[600] mb-4">
+                            Interested in collaborating?
+                        </h2>
+                        <p className="text-[18px] text-gray-500 font-[300] mb-8 max-w-[600px] mx-auto">
+                            I'm always open to discussing new opportunities, interesting projects,
+                            or just having a conversation about technology and development.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button
+                                onClick={() => navigate('/contact')}
+                                className="px-8 py-3 bg-black text-white rounded-lg text-[16px] font-[500] hover:bg-gray-800 transition-colors"
+                            >
+                                Get in Touch
+                            </button>
+                            <button className="px-8 py-3 border border-gray-300 text-gray-700 rounded-lg text-[16px] font-[500] hover:bg-gray-50 transition-colors">
+                                View Resume
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </BlurFade>
         </div>
     )
 }
