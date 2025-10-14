@@ -1,126 +1,126 @@
 import Navbar from "@/components/navbar";
-import { Github, ExternalLink, Play } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { DetailedProjectCard } from "@/components/detailed-project-card";
 import { useNavigate } from "react-router-dom";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
+
+
 const PROJECTS = [
     {
-        title: "E-Commerce Web Application",
-        description: "A full-stack e-commerce platform built with React and Node.js, featuring user authentication, product catalog, and payment integration.",
-        longDescription: "This comprehensive e-commerce solution includes advanced features like real-time inventory management, order tracking, and an admin dashboard. The application handles complex state management and provides a seamless shopping experience across devices.",
-        dates: "Mar 2024 - Jun 2024",
-        tags: ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
-        image: "https://images.unsplash.com/photo-1593720213681-e9a8778330a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NTc1Mzc4MDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        title: "Romona’s Home Care - iOS Application",
+        description: "A full-featured iOS app for home care management with scheduling, employee management, and geofenced clock-in.",
+        longDescription: "Architected and developed a production-grade iOS application using SwiftUI and Firebase (Firestore, Storage, Auth), comprising over 70 Swift files across five core modules—Scheduling, Residents, Employees, Financials, and Clock-In—with role-based authentication and dual user interfaces. Implemented protocol-based service layers managing over 90 database operations, parallel data fetching with Swift’s TaskGroup API, and a hierarchical Firestore schema optimized for query performance. Added geofenced clock-in via MapKit and centralized OSLog error handling.",
+        dates: "July 2025 – October 2025",
+        tags: ["SwiftUI", "Firebase", "MapKit", "CoreLocation", "iOS"],
+        image: "",
         links: [
-            {
-                icon: <Github className="w-3 h-3" />,
-                type: "Source",
-                href: "#"
-            },
+            // {
+            //     icon: <Github className="w-3 h-3" />,
+            //     type: "Source",
+            //     href: "https://github.com/JoshFVO"
+            // },
             {
                 icon: <ExternalLink className="w-3 h-3" />,
-                type: "Live Demo",
-                href: "#"
+                type: "App Site",
+                href: "https://romonashomecare.com/app-support"
             }
         ],
         features: [
-            "User authentication and authorization system",
-            "Product catalog with search and filtering",
-            "Shopping cart and checkout process",
-            "Payment integration with Stripe",
-            "Order management and tracking",
-            "Admin dashboard for inventory management"
+            "Five core modules: Scheduling, Residents, Employees, Financials, Clock-In",
+            "Role-based authentication and dual UIs",
+            "Service layer with 90+ async database operations",
+            "Parallel data fetching with Swift TaskGroup",
+            "Hierarchical Firestore structure for efficient queries",
+            "Geofenced clock-in with MapKit (100m radius)",
+            "Centralized error handling with OSLog"
         ],
-        techStack: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Stripe API", "Tailwind CSS"]
+        techStack: ["Swift", "SwiftUI", "Firebase Firestore", "Firebase Auth", "MapKit", "CoreLocation", "OSLog"]
     },
     {
-        title: "AI-Powered Image Classification",
-        description: "Machine learning model using TensorFlow to classify images with 95% accuracy, deployed with a Flask API and React frontend.",
-        longDescription: "Developed a convolutional neural network (CNN) for image classification using transfer learning with pre-trained models. The system includes data preprocessing, model training, evaluation, and deployment pipeline with comprehensive testing.",
-        dates: "Jan 2024 - Mar 2024",
-        tags: ["Python", "TensorFlow", "Flask", "React", "OpenCV"],
-        image: "https://images.unsplash.com/photo-1655891709782-15c1303a2a25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDF8fHx8MTc1NzYyNjU2NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        title: "Referred.fyi - Referral Marketplace Platform",
+        description: "A full-stack referral marketplace web app built with React, TypeScript, and AWS Amplify Gen 2.",
+        longDescription: "Architected and developed a full-stack referral marketplace enabling job posting, referral management, messaging, and payments. Built using React, TypeScript, AWS Amplify (Gen 2), and Stripe, with 193+ TypeScript/TSX files and eight core features. Implemented service-oriented backend with AWS Lambda functions for Stripe payments, email automation, OpenAI resume parsing, and more. Designed GraphQL schema with 15+ interconnected models, multi-tenant authorization, and responsive analytics dashboards with Tailwind and shadcn/ui components.",
+        dates: "July 2024 – July 2025",
+        tags: ["React", "TypeScript", "AWS Amplify", "Stripe", "GraphQL"],
+        image: "",
         links: [
-            {
-                icon: <Github className="w-3 h-3" />,
-                type: "Source",
-                href: "#"
-            },
-            {
-                icon: <Play className="w-3 h-3" />,
-                type: "Demo",
-                href: "#"
-            }
-        ],
-        features: [
-            "Custom CNN architecture with transfer learning",
-            "Real-time image processing and classification",
-            "RESTful API for model inference",
-            "Interactive web interface for image upload",
-            "Model performance monitoring and logging",
-            "Batch processing capabilities"
-        ],
-        techStack: ["Python", "TensorFlow", "Keras", "Flask", "OpenCV", "NumPy", "Pandas", "React", "Axios"]
-    },
-    {
-        title: "Mobile Fitness Tracker",
-        description: "Cross-platform mobile app built with React Native for tracking workouts, nutrition, and fitness goals with offline capabilities.",
-        longDescription: "A comprehensive fitness tracking application that helps users monitor their health journey. Features include workout planning, nutrition tracking, progress visualization, and social features to connect with friends and share achievements.",
-        dates: "Sep 2023 - Dec 2023",
-        tags: ["React Native", "Firebase", "Redux", "SQLite"],
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudHxlbnwxfHx8fDE3NTc1Njg1NTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        links: [
-            {
-                icon: <Github className="w-3 h-3" />,
-                type: "Source",
-                href: "#"
-            },
+            // {
+            //     icon: <Github className="w-3 h-3" />,
+            //     type: "Source",
+            //     href: "https://github.com/JoshFVO"
+            // },
             {
                 icon: <ExternalLink className="w-3 h-3" />,
-                type: "App Store",
-                href: "#"
+                type: "Live Site",
+                href: "https://referred.fyi"
             }
         ],
         features: [
-            "Workout planning and tracking",
-            "Nutrition and calorie monitoring",
-            "Progress visualization with charts",
-            "Offline data synchronization",
-            "Social features and friend connections",
-            "Custom exercise library and routines"
+            "Eight core features: Job Posting, Messaging, Payments, Analytics, and more",
+            "AWS Lambda backend with 9+ functions (Stripe, SES, OpenAI, Calendly OAuth)",
+            "GraphQL data layer with 15+ interconnected models",
+            "Stripe Connect for dual-sided marketplace payments",
+            "Role-based multi-tenant company support",
+            "Component library with 112+ React components",
+            "Real-time messaging and analytics dashboard"
         ],
-        techStack: ["React Native", "TypeScript", "Firebase", "Redux Toolkit", "SQLite", "React Navigation", "Victory Charts"]
+        techStack: ["React", "TypeScript", "AWS Amplify Gen 2", "Stripe", "GraphQL", "TailwindCSS", "Radix UI", "shadcn/ui"]
     },
     {
-        title: "Real-Time Analytics Dashboard",
-        description: "Interactive dashboard for visualizing business metrics and KPIs with real-time data updates using WebSocket connections.",
-        longDescription: "Built a comprehensive analytics platform that processes and visualizes large datasets in real-time. The dashboard provides customizable widgets, automated reports, and alerting systems for business intelligence and decision-making.",
-        dates: "Jun 2023 - Aug 2023",
-        tags: ["Vue.js", "D3.js", "WebSocket", "PostgreSQL", "Redis"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NTc1NzI2ODl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        title: "AWS Image Processing System",
+        description: "An AWS Lambda-based system for user-specific image processing using Python.",
+        longDescription: "Built an AWS Lambda image processing pipeline using Python’s Pillow library for on-demand image resizing, reformatting, and flipping. Designed event-driven architecture integrating S3 and Lambda to automatically trigger functions upon user uploads. Tested all endpoints using Postman to verify system reliability and API response integrity.",
+        dates: "September 2023 – December 2023",
+        tags: ["Python", "AWS Lambda", "S3", "Pillow"],
+        image: "",
         links: [
-            {
-                icon: <Github className="w-3 h-3" />,
-                type: "Source",
-                href: "#"
-            },
-            {
-                icon: <ExternalLink className="w-3 h-3" />,
-                type: "Live Demo",
-                href: "#"
-            }
+            // {
+            //     icon: <Github className="w-3 h-3" />,
+            //     type: "Source",
+            //     href: "https://github.com/JoshFVO"
+            // },
+            // {
+            //     icon: <ExternalLink className="w-3 h-3" />,
+            //     type: "Demo",
+            //     href: "#"
+            // }
         ],
         features: [
-            "Real-time data visualization with WebSocket",
-            "Customizable dashboard widgets",
-            "Interactive charts and graphs",
-            "Automated report generation",
-            "Alert system for threshold monitoring",
-            "Multi-user support with role-based access"
+            "Lambda functions for image resizing, reformatting, and flipping",
+            "Event-driven architecture triggered by S3 uploads",
+            "Efficient image handling using Pillow",
+            "API tested with Postman"
         ],
-        techStack: ["Vue.js", "D3.js", "Chart.js", "WebSocket", "Node.js", "PostgreSQL", "Redis", "Docker"]
+        techStack: ["Python", "AWS Lambda", "S3", "Pillow", "Postman"]
+    },
+    {
+        title: "Asteroids Game",
+        description: "A classic Asteroids game recreation programmed entirely in ARM Assembly.",
+        longDescription: "Recreated the classic Asteroids game using ARM Assembly on an Altera DE1-SoC, optimized for ARMv7 architecture. Implemented pixel-perfect collision detection, physics-based movement, and efficient rendering to ensure smooth gameplay under resource constraints. Showcased strong understanding of low-level programming and hardware-optimized algorithms.",
+        dates: "January 2022 – March 2022",
+        tags: ["ARM Assembly", "Game Development", "Embedded Systems"],
+        image: "",
+        links: [
+            // {
+            //     icon: <Github className="w-3 h-3" />,
+            //     type: "Source",
+            //     href: "https://github.com/JoshFVO"
+            // },
+            // {
+            //     icon: <Play className="w-3 h-3" />,
+            //     type: "Demo",
+            //     href: "#"
+            // }
+        ],
+        features: [
+            "ARM Assembly implementation for ARMv7 architecture",
+            "Pixel-perfect collision detection",
+            "Physics-based movement",
+            "Optimized rendering for embedded hardware"
+        ],
+        techStack: ["ARM Assembly", "C", "Altera DE1-SoC"]
     }
 ];
 

@@ -15,14 +15,24 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Home() {
 
-    const [name, setName] = useState<string>("")
-    const [email, setEmail] = useState<string>("")
-    const [message, setMessage] = useState<string>("")
+    const [status, setStatus] = useState<string>("idle")
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log("Form submitted:", { name, email, message });
+        const form = e.target as HTMLFormElement;
+        const formData = new FormData(form);
+
+        try {
+            await fetch("/", {
+                method: "POST",
+                body: formData,
+            });
+            setStatus("success");
+            form.reset();
+        } catch (err) {
+            console.error(err);
+            setStatus("error");
+        }
     };
 
 
@@ -35,7 +45,9 @@ export default function Home() {
                         <BlurFade>
                             <h1 className="text-[64px] font-[600]">Hi, I'm Josh</h1>
                             <h2 className="text-[32px] font-[400]">Software Engineer</h2>
-                            <p className="text-[16px] font-[400]">I am a software engineer with a passion for building full-stack applications. I have experience in React, Node.js, Python, and C/C++.</p>
+                            <p className="text-[16px] font-[400]">
+                                I’m a software engineer experienced in full-stack and iOS development, building scalable apps with React, TypeScript, AWS, and SwiftUI. I love creating clean, high-performance software that makes an impact.
+                            </p>
                             <Button
                                 className="bg-black text-white text-[16px] px-[24px] py-[24px] w-full md:w-fit rounded-full mt-[16px] font-[400] hover:bg-black/80 transition-all duration-300 ease-out hover:cursor-pointer"
                                 variant="default"
@@ -62,8 +74,9 @@ export default function Home() {
                 <div className="pt-[96px]">
                     <BlurFade>
                         <div className="text-[24px] font-[600]">About</div>
-                        <div className="text-gray-500">I'm Joshua Mahabir, a NYC-born software engineer with a passion for full-stack development. I graduated from Northwestern University in July 2024 and currently lead engineering at Referred.fyi, a startup I helped launch from the ground up. I love building scalable web apps with React, TypeScript, and AWS. Outside of coding, I’m into RPGs, home-cooking, lifting, and all things Soulsborne.</div>
-                    </BlurFade>
+                        <div className="text-gray-500">
+                            I’m Joshua Mahabir, a NYC-based software engineer specializing in full-stack and iOS development. I graduated from Northwestern University in June 2024 with a degree in Computer Science and have since led engineering at Referred.fyi, a referral-based job marketplace I helped launch. I’ve also developed Romona’s Home Care, a production-ready iOS app built with SwiftUI and Firebase. I love crafting scalable products with React, TypeScript, and AWS. Outside of coding, I’m into taekwondo, drawing, Soulsborne games, and home cooking.
+                        </div>                    </BlurFade>
                 </div>
 
                 <div className="pt-[96px] text-center max-w-[672px] mx-auto">
@@ -71,13 +84,15 @@ export default function Home() {
                         <div className="text-[24px] font-[600]">Skills</div>
                         <div>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">TypeScript</Badge>
+                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">Swift</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">Python</Badge>
-                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">C++</Badge>
+                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">C/C++</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">React</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">Node.js</Badge>
-                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">Next.js</Badge>
+                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">Fullstack</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">AWS</Badge>
-                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">PostgreSQL</Badge>
+                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">SQL</Badge>
+                            <Badge className="mr-[8px] mt-[8px] bg-black text-white">GraphQL</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">Git</Badge>
                             <Badge className="mr-[8px] mt-[8px] bg-black text-white">Docker</Badge>
 
@@ -88,6 +103,21 @@ export default function Home() {
                 <div className="pt-[96px] grid grid-cols-1 lg:grid-cols-2 gap-[64px]">
                     <BlurFade>
                         <div className="text-[24px] font-[600]">Work Experience</div>
+
+                        <div className="flex flex-row justify-between items-center py-[16px]">
+                            <div className="flex flex-row">
+                                <div>
+                                    <img src="/Favicon.jpeg" alt="Referred.fyi" className="w-[48px] h-[48px] object-cover rounded-full mr-[16px]" />
+                                </div>
+                                <div>
+                                    <div className="font-[500]">Romona's Home Care</div>
+                                    <div className="text-[14px] font-[300]">iOS Developer</div>
+                                </div>
+                            </div>
+                            <div className="text-gray-600 font-[300]">
+                                August 2025 - October 2025
+                            </div>
+                        </div>
                         <div className="flex flex-row justify-between items-center py-[16px]">
                             <div className="flex flex-row">
                                 <div>
@@ -99,21 +129,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="text-gray-600 font-[300]">
-                                October 2024 - Present
-                            </div>
-                        </div>
-                        <div className="flex flex-row justify-between items-center py-[16px]">
-                            <div className="flex flex-row">
-                                <div className="mr-[16px] h-[48px] w-[48px] border text-gray-600 rounded-full flex justify-center items-center shrink-0">
-                                    RHC
-                                </div>
-                                <div>
-                                    <div className="font-[500]">Romona's Home Care</div>
-                                    <div className="text-[14px] font-[300]">Full-Stack Engineer</div>
-                                </div>
-                            </div>
-                            <div className="text-gray-600 font-[300]">
-                                July 2024 - October 2024
+                                July 2024 - July 2025
                             </div>
                         </div>
                     </BlurFade>
@@ -204,50 +220,61 @@ export default function Home() {
 
                     <div>
                         <BlurFade className="">
-                            <form onSubmit={handleSubmit}>
-                            <div>
-                                <Label htmlFor="Name" className="text-[#181D27] text-[14px] font-normal ">Name <span className="text-[#EF7316]">*</span></Label>
-                                <input
-                                    placeholder="Enter your full name"
-                                    name="name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                    required
-                                    className="w-full mt-[6px] text-[16px] font-light px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className="mt-[24px]">
-                                <Label htmlFor="Email" className="text-[#181D27] text-[14px] font-normal">Email <span className="text-[#EF7316]">*</span></Label>
-                                <input
-                                    placeholder="Enter your email address"
-                                    name="email"
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    className="mt-[6px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className="mt-[24px]">
-                                <Label htmlFor="Message" className="text-[#181D27] text-[14px] font-normal">Message <span className="text-[#EF7316]">*</span></Label>
-                                <Textarea
-                                    placeholder="Leave a message..."
-                                    name="message"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    required
-                                    className="mt-[6px] min-h-[134px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className=" flex flex-row justify-center">
-                            <Button
-                                className="bg-black w-full text-white text-[16px] px-[24px] py-[24px] rounded-full mt-[24px] font-[400] hover:bg-black/80 transition-all duration-300 ease-out hover:cursor-pointer"
-                                variant="default"
-                                onClick={() => {
-                                    
-                                }}
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                onSubmit={handleSubmit}
                             >
-                                Send Message
-                            </Button>
-                            </div>
+                                <input type="hidden" name="form-name" value="contact" />
+
+                                <div>
+                                    <Label htmlFor="Name" className="text-[#181D27] text-[14px] font-normal ">Name <span className="text-[#EF7316]">*</span></Label>
+                                    <input
+                                        placeholder="Enter your full name"
+                                        name="full-name"
+                                        required
+                                        className="w-full mt-[6px] text-[16px] font-light px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className="mt-[24px]">
+                                    <Label htmlFor="Email" className="text-[#181D27] text-[14px] font-normal">Email <span className="text-[#EF7316]">*</span></Label>
+                                    <input
+                                        placeholder="Enter your email address"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        className="mt-[6px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className="mt-[24px]">
+                                    <Label htmlFor="Message" className="text-[#181D27] text-[14px] font-normal">Message <span className="text-[#EF7316]">*</span></Label>
+                                    <Textarea
+                                        placeholder="Leave a message..."
+                                        name="message"
+                                        required
+                                        className="mt-[6px] min-h-[134px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className=" flex flex-row justify-center">
+                                    <Button
+                                        type="submit"
+                                        className="bg-black w-full text-white text-[16px] px-[24px] py-[24px] rounded-full mt-[24px] font-[400] hover:bg-black/80 transition-all duration-300 ease-out hover:cursor-pointer"
+                                        variant="default"
+                                    >
+                                        Send Message
+                                    </Button>
+                                </div>
                             </form>
+
+                            {status === "success" && (
+                                <div className="mt-[24px] p-[16px] bg-green-100 text-green-800 rounded-[8px]">
+                                    Thanks for your message! I'll be in touch shortly.
+                                </div>
+                            )}
+
+                            {status === "error" && (
+                                <div className="mt-[24px] p-[16px] bg-red-100 text-red-800 rounded-[8px]">
+                                    Oops! Something went wrong. Please try again later.
+                                </div>
+                            )}
 
                         </BlurFade>
                     </div>

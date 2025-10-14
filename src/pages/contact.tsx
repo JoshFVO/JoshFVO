@@ -9,14 +9,24 @@ import { GithubIcon, Mail } from "lucide-react"
 
 export default function Contact() {
 
-    const [name, setName] = useState<string>("")
-    const [email, setEmail] = useState<string>("")
-    const [message, setMessage] = useState<string>("")
+    const [status, setStatus] = useState<string>("idle")
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log("Form submitted:", { name, email, message });
+        const form = e.target as HTMLFormElement;
+        const formData = new FormData(form);
+
+        try {
+            await fetch("/", {
+                method: "POST",
+                body: formData,
+            });
+            setStatus("success");
+            form.reset();
+        } catch (err) {
+            console.error(err);
+            setStatus("error");
+        }
     };
 
 
@@ -46,50 +56,61 @@ export default function Contact() {
 
                     <div>
                         <BlurFade className="">
-                            <form onSubmit={handleSubmit}>
-                            <div>
-                                <Label htmlFor="Name" className="text-[#181D27] text-[14px] font-normal ">Name <span className="text-[#EF7316]">*</span></Label>
-                                <input
-                                    placeholder="Enter your full name"
-                                    name="name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                    required
-                                    className="w-full mt-[6px] text-[16px] font-light px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className="mt-[24px]">
-                                <Label htmlFor="Email" className="text-[#181D27] text-[14px] font-normal">Email <span className="text-[#EF7316]">*</span></Label>
-                                <input
-                                    placeholder="Enter your email address"
-                                    name="email"
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    className="mt-[6px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className="mt-[24px]">
-                                <Label htmlFor="Message" className="text-[#181D27] text-[14px] font-normal">Message <span className="text-[#EF7316]">*</span></Label>
-                                <Textarea
-                                    placeholder="Leave a message..."
-                                    name="message"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    required
-                                    className="mt-[6px] min-h-[134px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
-                            </div>
-                            <div className=" flex flex-row justify-center">
-                            <Button
-                                className="bg-black w-full text-white text-[16px] px-[24px] py-[24px] rounded-full mt-[24px] font-[400] hover:bg-black/80 transition-all duration-300 ease-out hover:cursor-pointer"
-                                variant="default"
-                                onClick={() => {
-                                    
-                                }}
+                            <form
+                                name="contact-section"
+                                method="POST"
+                                data-netlify="true"
+                                onSubmit={handleSubmit}
                             >
-                                Send Message
-                            </Button>
-                            </div>
+                                <input type="hidden" name="form-name" value="contact-section" />
+
+                                <div>
+                                    <Label htmlFor="Name" className="text-[#181D27] text-[14px] font-normal ">Name <span className="text-[#EF7316]">*</span></Label>
+                                    <input
+                                        placeholder="Enter your full name"
+                                        name="full-name"
+                                        required
+                                        className="w-full mt-[6px] text-[16px] font-light px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className="mt-[24px]">
+                                    <Label htmlFor="Email" className="text-[#181D27] text-[14px] font-normal">Email <span className="text-[#EF7316]">*</span></Label>
+                                    <input
+                                        placeholder="Enter your email address"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        className="mt-[6px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className="mt-[24px]">
+                                    <Label htmlFor="Message" className="text-[#181D27] text-[14px] font-normal">Message <span className="text-[#EF7316]">*</span></Label>
+                                    <Textarea
+                                        placeholder="Leave a message..."
+                                        name="message"
+                                        required
+                                        className="mt-[6px] min-h-[134px] text-[16px] font-light w-full px-[14px] py-[10px] border-[1px] border-[#E9EAEB] shadow-sm rounded-[8px] box-border focus:outline-none focus:ring-0 focus:border-black transition-shadow ease-in-out duration-300" />
+                                </div>
+                                <div className=" flex flex-row justify-center">
+                                    <Button
+                                        type="submit"
+                                        className="bg-black w-full text-white text-[16px] px-[24px] py-[24px] rounded-full mt-[24px] font-[400] hover:bg-black/80 transition-all duration-300 ease-out hover:cursor-pointer"
+                                        variant="default"
+                                    >
+                                        Send Message
+                                    </Button>
+                                </div>
                             </form>
+
+                            {status === "success" && (
+                                <div className="mt-[24px] p-[16px] bg-green-100 text-green-800 rounded-[8px]">
+                                    Thanks for your message! I'll be in touch shortly.
+                                </div>
+                            )}
+
+                            {status === "error" && (
+                                <div className="mt-[24px] p-[16px] bg-red-100 text-red-800 rounded-[8px]">
+                                    Oops! Something went wrong. Please try again later.
+                                </div>
+                            )}
 
                         </BlurFade>
                     </div>

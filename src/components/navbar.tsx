@@ -61,7 +61,7 @@ export default function Navbar() {
                             <a href="/projects" onClick={() => setMenuOpen(false)}>Projects</a>
                         </li>
                         <li>
-                            <a href="/home" onClick={() => setMenuOpen(false)}>Blog</a>
+                            <a href="/recipes" onClick={() => setMenuOpen(false)}>Recipes</a>
                         </li>
                         <li>
                             <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
