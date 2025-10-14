@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <nav className="bg-zinc-950">
             <div className="py-[12px] text-white h-[64px] flex flex-col justify-center">
-                <div className="px-[32px] lg:px-[64px] flex flex-row justify-between items-center">
+                <div className="px-[16px] md:px-[32px] lg:px-[64px] flex flex-row justify-between items-center">
                     <div>
                         <h1 className="text-[24px] font-[600]">
                             <a href="/home">Joshua Mahabir</a>
