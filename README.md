@@ -50,9 +50,9 @@ I'm a **full-stack software engineer** with a passion for building scalable syst
 
 ## 📫 Connect with me
 
-- [GitHub](https://github.com/yourusername)  
-- [Portfolio](https://yourportfolio.com)  
-- [LinkedIn](https://linkedin.com/in/joshmahabir)  
+- [GitHub](https://github.com/JoshFVO)  
+- [Portfolio](https://joshfvo.com)  
+- [LinkedIn](https://www.linkedin.com/in/joshua-mahabir-901378217)  
 
 ---
 
